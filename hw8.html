@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw8</title>
+</head>
+<body>
+    <script>
+//         Задание 1
+// Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+// 0 – это ноль
+// 1 – нечетное число
+// 2 – четное число
+// 3 – нечетное число
+// …
+// 10 – четное число
+
+console.log('Задание 1');
+console.log('0 - это ноль');
+for (let i = 1; i < 11; i++) {
+    if (i % 2 !== 0) console.log(i + ' – нечетное число');
+    else console.log(i + ' – четное число');
+}
+console.log();
+
+// Задание 2
+// Дан массив [1, 2, 3, 4, 5, 6, 7]
+// Сделайте из этого массива следующий [1, 2, 3, 6, 7]
+console.log('Задание 2');
+const arr = [1, 2, 3, 4, 5, 6, 7];
+arr.splice(3, 2);
+console.log(arr);
+console.log();
+// Задание 3
+// Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+// 1. Рассчитать сумму элементов этого массива
+// 2. Найти минимальное число
+// 3. Найти есть ли в этом массиве число 3
+
+console.log('Задание 3');
+const getRandomArray = (min, max, count) => { 
+    const array = [];
+    for (let i = 0; i < count; i++) array.push(Math.floor(Math.random() * (max - min) + min));
+    return array;
+}
+
+const getSumArray = (array) => { 
+    let sum = 0;
+    array.forEach(element => sum += element);
+    return sum;
+ }
+
+const getMinNumber = (array) => { 
+    let min = array[0];
+    for (let i = 1; i < array.length; i++) if (array[i] < min) min = array[i];
+    return min;
+ }
+
+const isElement = (array, element) => { 
+    if (array.includes(element)) console.log('В массиве имеется элемент: ' + element);
+    else console.log('В массиве нет элемента: ' + element);
+ }
+
+const arr2 = getRandomArray(0, 9, 5);
+console.log('random array - ' + arr2);
+console.log("сумма - " + getSumArray(arr2));
+console.log('минимальное - ' + getMinNumber(arr2));
+isElement(arr2, 3);
+console.log();
+// *Необязательное задание. *
+// Необходимо вывести горку в консоль (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:
+
+// x
+// xx
+// xxx
+// xxxx
+// xxxxx
+console.log('Необязательное задание');
+const printTriangle = (symbol, rows) => { 
+    let str = symbol;
+    for (let i = 0; i < rows; i++) {
+            console.log(str);
+            str += symbol;
+        }
+    }
+printTriangle('x', 20);
+console.log();
+    </script>
+</body>
+</html>
