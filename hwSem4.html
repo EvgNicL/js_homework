@@ -35,6 +35,8 @@
       console.log(el1);
       console.log();
       // 2. У элемента с классом btn необходимо убрать класс "btn-secondary", если он присутствует у этого элемента, либо добавить, если такого класса у элемента не было.
+
+      // исправление от преподавателя: использовать метод el.classList.toggle('..') (Если класс у элемента есть, метод classList.toggle ведёт себя как classList.remove и класс у элемента убирает. А если указанного класса у элемента нет, то classList.toggle, как и classList.add, добавляет элементу этот класс. )
       const el2 = document.querySelector('.btn');
       let classesEl = el2.classList;
       classesEl.forEach((element) => {
@@ -57,7 +59,7 @@
       console.log();
       // 4. Используя метод insertAdjacentHTML добавьте после div'a с классом "dropdown" следующую разметку:
       // `<a href="#">link</a>`
-      const el4 = document.querySelector('.dropdown');
+      const el4 = document.querySelector('div.dropdown');
       el4.insertAdjacentHTML('afterEnd', '<a href="#">link</a>');
       console.log();
       
