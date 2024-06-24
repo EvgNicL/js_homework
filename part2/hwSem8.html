@@ -62,6 +62,16 @@
       const inputEl = document.querySelectorAll('.form-control');
       const buttonEl = document.querySelector('form button');
 
+/*Добрый день, Евгения!
+Хорошая работа! Насчёт последнего задания:
+1. Вы используете classList.toggle('error'), что переключает класс error независимо от того, есть ли он уже у элемента.
+2. Нет необходимости проверять el.value дважды. Можно сразу проверить, если поле пустое.
+3. Лучше использовать input событие на каждом элементе ввода, чтобы убирать класс error, когда пользователь начинает вводить данные.
+
+Чуть-чуть подправить и будет отлично.
+Желаю вам успехов.*/
+
+
       buttonEl.addEventListener('click', (e) => {
         e.preventDefault();
         let count = 0;

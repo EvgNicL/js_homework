@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HwSem10</title>
+</head>
+<body>
+    <script src="data.js"></script>
+    <script>
+        "use strict";
+// #### Задание 1
+// 1. Поиск в интернете (бесплатные api примеры).
+// 2. Найти любые данные, на произвольную тему.
+// 3. Создать файл data.js.
+// 4. Создать переменную которая будет хранить данные из публичных api.
+const parseData = JSON.parse(albomsEl);
+console.log(parseData);
+
+
+// #### Задание 2
+// 1. Создать файл index.html.
+// 2. Подключить data.js.
+// 3. Сформировать контент из данных (картинка загловок и параграф).
+// 4. Добавить данный контент в вёрстку.
+// 5. * Добавить стили при необходимости (по желанию).
+document.body.insertAdjacentHTML('beforeend', `<div class="content"></div>`);
+const contentEl = document.querySelector('.content');
+parseData.forEach(item => {
+    contentEl.insertAdjacentHTML('beforeend', `
+    <h2>${item.title}</h2>
+    <img src="${item.link}" alt="img " width="150px">
+    <p>id:  ${item.id}</p>
+    `)
+});
+    </script>
+</body>
+</html>
