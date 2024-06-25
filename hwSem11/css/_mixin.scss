@@ -1,0 +1,53 @@
+ @mixin center() {
+   max-width: $widthSite ;
+   margin: 0 auto;
+   padding: 0 16px 0 16px;
+ }
+
+ @mixin padding_center() {
+   padding-left: calc(50% - ($widthSite + 32px) / 2);
+   padding-right: calc(50% - ($widthSite + 32px) / 2);
+ }
+
+ @mixin flex() {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ @mixin buttonGrey() {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   padding: 0 40px 0 40px;
+   border: 1px solid rgb(164, 164, 164);
+   color: rgb(0, 0, 0);
+   font-weight: 300;
+   transition: all 0.3s;
+   cursor: pointer;
+ }
+
+ @mixin buttonGreyHover() {
+   color: $colorRed23991112;
+   border: 1px solid $colorRed23991112;
+ }
+
+ @mixin buttonRed() {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   transition: all 0.3s;
+   width: 273px;
+   color: $colorWhite;
+   background-color: $colorRed;
+   outline: none;
+   border: 0;
+   cursor: pointer;
+ }
+
+ @mixin buttonRedHover() {
+   transform: scale(1.03);
+ }
+

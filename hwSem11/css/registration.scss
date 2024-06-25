@@ -1,0 +1,89 @@
+@import 'vars';
+@import 'mixin';
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-bottom: 96px;
+
+    &__registration {
+        width: 360px;
+        padding-top: 40px;
+
+        &_title {
+            font-weight: 300;
+            line-height: 19px;
+        }
+
+        &_input::placeholder {
+            color: rgb(177, 177, 177);
+        }
+
+        &_gender {
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            padding: 33px 20px 35px 0;
+
+        }
+
+        .male,
+        .female {
+            margin-right: 10px;
+            accent-color: rgb(250, 195, 195);
+        }
+
+        &_text {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: rgb(177, 177, 177);
+            padding-top: 15px;
+            padding-bottom: 39px;
+        }
+
+        &_button {
+            @include buttonRed();
+            width: 167px;
+            gap: 20px;
+        }
+
+        &_button:hover {
+            @include buttonRedHover();
+        }
+    }
+
+    &__content {
+        padding-top: 40px;
+        max-width: 652px;
+
+        &_title, &_text, &_list {
+            color: rgb(0, 0, 0);
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &_text {
+            padding-top: 22px;
+            padding-bottom: 21px;
+
+        }
+        &_list-item{
+            padding-bottom: 16px;
+            padding-left: 40px;
+            position: relative;
+        }
+        &_list-item::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 20px;
+            height: 16px;
+            background-size: cover;
+            background-image: url(../img/icons/Vector.svg);
+        }
+    }
+}

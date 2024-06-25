@@ -1,0 +1,217 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: start;
+  margin-top: 96px;
+  margin-bottom: 128px;
+  flex-wrap: wrap;
+}
+.main__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 652px;
+}
+.main__cards_container {
+  display: flex;
+  box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+}
+.main__cards_container-close {
+  fill: rgb(87, 87, 87);
+  padding-top: 28px;
+  padding-right: 22px;
+  padding-bottom: 12px;
+  cursor: pointer;
+  height: 30px;
+  transition: all 0.3s;
+}
+.main__cards_container-close:hover {
+  transform: scale(1.1);
+}
+.main__cards_container-product {
+  max-width: 262px;
+}
+.main__cards_container-content {
+  width: 330px;
+  padding-left: 31px;
+  padding-top: 22px;
+  padding-right: 20px;
+}
+.main__cards_container-content-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: 42px;
+  max-width: 262px;
+}
+.main__cards_container-content-text {
+  font-weight: 400;
+  font-size: 22px;
+  color: rgb(87, 87, 87);
+  line-height: 30px;
+}
+.main__cards_container-content-text .spanprice {
+  color: rgb(239, 91, 112);
+}
+.main__cards_container-content-text span {
+  color: rgb(111, 110, 110);
+}
+.main__cards_container-content-text .count {
+  display: inline-block;
+  padding: 0 16px 0 16px;
+  border: 1px solid rgb(234, 234, 234);
+  line-height: 22px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(101, 101, 101);
+  width: 25px;
+  text-align: center;
+}
+.main__cards_container-content .ask {
+  display: inline-block;
+  border: 1px solid rgb(111, 110, 110);
+  line-height: 16px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding-left: 1px;
+  margin-right: 18px;
+  cursor: pointer;
+}
+.main__cards_container-content .ask-red {
+  color: rgb(239, 91, 112);
+  border: 1px solid rgb(239, 91, 112);
+}
+.main__cards_buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 72px;
+}
+.main__cards_buttons-grey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 40px 0 40px;
+  border: 1px solid rgb(164, 164, 164);
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 17px;
+}
+.main__cards_buttons-grey:hover {
+  color: rgb(239, 91, 112);
+  border: 1px solid rgb(239, 91, 112);
+}
+.main__execution {
+  width: 360px;
+}
+.main__execution_adress {
+  padding-top: 17px;
+}
+.main__execution_adress-title {
+  font-weight: 300;
+  line-height: 19px;
+}
+.main__execution_adress-input {
+  padding-left: 17.24px;
+  display: block;
+  width: calc(100% - 17px - 2px);
+  height: 45px;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid rgb(164, 164, 164);
+}
+.main__execution_adress .inp1::-moz-placeholder {
+  color: rgb(177, 177, 177);
+}
+.main__execution_adress .inp1::placeholder {
+  color: rgb(177, 177, 177);
+}
+.main__execution_adress-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 40px 0 40px;
+  border: 1px solid rgb(164, 164, 164);
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding-left: 14.2px;
+  padding-right: 14.2px;
+  height: 35px;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  background-color: #fff;
+  color: rgb(74, 74, 74);
+  margin-top: 23.5px;
+}
+.main__execution_adress-quote:hover {
+  color: rgb(239, 91, 112);
+  border: 1px solid rgb(239, 91, 112);
+}
+.main__execution_total {
+  background-color: rgb(245, 243, 243);
+  width: calc(100% - 68px);
+  margin-top: 57px;
+  padding: 39px 34px 42px 34px;
+}
+.main__execution_total-subtext {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: rgb(74, 74, 74);
+  text-align: right;
+  margin-bottom: 12px;
+}
+.main__execution_total-subtotal {
+  margin-left: 20px;
+}
+.main__execution_total-grandtext {
+  font-weight: 300;
+  text-align: right;
+}
+.main__execution_total-grandtotal {
+  color: rgb(241, 109, 127);
+  margin-left: 20px;
+  margin-right: 3px;
+  font-weight: 700;
+}
+.main__execution_total-line {
+  height: 1px;
+  width: 275px;
+  margin: 21px auto 17px auto;
+  background-color: rgb(226, 226, 226);
+}
+.main__execution_total-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  transition: all 0.3s;
+  width: 273px;
+  color: white;
+  background-color: rgb(241, 109, 127);
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 19px;
+  margin: 0 auto;
+}
+.main__execution_total-button:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .main__cards_container-content {
+    width: 734px;
+  }
+}/*# sourceMappingURL=cart.css.map */
