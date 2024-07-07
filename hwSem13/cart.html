@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product.css" />
+    <link rel="stylesheet" href="./css/cart.css">
+
+</head>
+<body>
+    <header class="header">
+        <section class="header__top">
+          <div class="center">
+            <div class="header__top_left">
+              <a href="index.html"><img src="./img/header/logo.svg" alt="logo" class="logo" /></a>
+              <img src="./img/header/loupe.svg" alt="loupe" class="loupe" />
+            </div>
+            <div class="header__top_right">
+              <div class="dropdown">
+                <img src="./img/header/menu.svg" alt="menu" class="menu_img" />
+                <div class="menu">
+                  <h5 class="menu_title">MENU</h5>
+                  <details>
+                    <summary class="menu_item">MAN</summary>
+                    <ul>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Accessories</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Bags</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Denim</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">T-Shirts</a>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary class="menu_item">WOMEN</summary>
+                    <ul>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Accessories</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Jackets&Coats</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Polos</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">T-Shirts</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Shirts</a>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary class="menu_item">KIDS</summary>
+                    <ul>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Accessories</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Jackets&Coats</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Polos</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">T-Shirts</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Shirts</a>
+                      </li>
+                      <li class="menu_list">
+                        <a href="#" class="menu_link">Bags</a>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+              </div>
+              <a href="registration.html">
+                <img src="./img/header/user.svg" alt="user" class="user" />
+              </a>
+              <a href="cart.html">
+                <img src="./img/header/basket.svg" alt="basket" class="basket" />
+              </a>
+              <div class="basket_count">5</div>
+            </div>
+          </div>
+        </section>
+  
+        <div class="header__nav">
+          <div class="center">
+              <h2 class="header__nav_left">SHOPPING CART </h2>
+          </div>
+        </div>
+    </header>
+
+    <main class="main center">
+        <div class="main__cards">
+
+            <!-- <div class="main__cards_container">
+
+                <img src="./img/products/3.jpeg" alt="foto" class="main__cards_container-product">
+
+                <div class="main__cards_container-content">
+                    <h6 class="main__cards_container-content-title">MANGO  PEOPLE  <br> T-SHIRT</h6>
+                    <p class="main__cards_container-content-text">Price: <span class="spanprice">$300  <span class="ask ask-red">?</span>	</span></p>
+                    <p class="main__cards_container-content-text">Color: <span>Red</span></p>
+                    <p class="main__cards_container-content-text">Size: <span>Xl<span class="ask">?</span>	</span></p>
+                    <p class="main__cards_container-content-text">Quantity:<span class="ask">?</span><input class="count" value="1"></input></p>
+                </div>
+
+                <div class="main__cards_container-close">
+                    <svg width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs/>
+                    <path id="Vector" d="M11.24 9L17.53 2.71C17.82 2.41 17.99 2.01 17.99 1.59C17.99 1.17 17.82 0.76 17.53 0.46C17.23 0.16 16.83 0 16.4 0C15.98 0 15.58 0.16 15.28 0.46L9 6.75L2.71 0.46C2.41 0.16 2.01 0 1.59 0C1.16 0 0.76 0.16 0.46 0.46C0.16 0.76 0 1.16 0 1.59C0 2.01 0.16 2.41 0.46 2.71L6.75 9L0.46 15.28C0.16 15.58 0 15.98 0 16.4C0 16.83 0.16 17.23 0.46 17.53C0.76 17.83 1.16 18 1.59 18C2.01 18 2.41 17.83 2.71 17.53L9 11.24L15.28 17.53C15.58 17.83 15.98 18 16.4 18C16.83 18 17.23 17.83 17.53 17.53C17.83 17.23 18 16.83 18 16.4C18 15.98 17.83 15.58 17.53 15.28L11.24 9Z" fill="#575757" fill-opacity="1.000000" fill-rule="nonzero"/>
+                </svg>
+                
+                </div>
+
+            </div>
+            <div class="main__cards_container">
+
+                <img src="./img/products/7.jpeg" alt="foto" class="main__cards_container-product">
+
+                <div class="main__cards_container-content">
+                    <h6 class="main__cards_container-content-title">MANGO  PEOPLE  <br> T-SHIRT</h6>
+                    <p class="main__cards_container-content-text">Price: <span class="spanprice">$300  <span class="ask ask-red">?</span>	</span></p>
+                    <p class="main__cards_container-content-text">Color: <span>Red</span></p>
+                    <p class="main__cards_container-content-text">Size: <span>Xl<span class="ask">?</span>	</span></p>
+                    <p class="main__cards_container-content-text">Quantity:<span class="ask">?</span><input class="count" value="2"></input></p>
+                </div>
+
+                <div class="main__cards_container-close">
+                    <svg width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs/>
+                    <path id="Vector" d="M11.24 9L17.53 2.71C17.82 2.41 17.99 2.01 17.99 1.59C17.99 1.17 17.82 0.76 17.53 0.46C17.23 0.16 16.83 0 16.4 0C15.98 0 15.58 0.16 15.28 0.46L9 6.75L2.71 0.46C2.41 0.16 2.01 0 1.59 0C1.16 0 0.76 0.16 0.46 0.46C0.16 0.76 0 1.16 0 1.59C0 2.01 0.16 2.41 0.46 2.71L6.75 9L0.46 15.28C0.16 15.58 0 15.98 0 16.4C0 16.83 0.16 17.23 0.46 17.53C0.76 17.83 1.16 18 1.59 18C2.01 18 2.41 17.83 2.71 17.53L9 11.24L15.28 17.53C15.58 17.83 15.98 18 16.4 18C16.83 18 17.23 17.83 17.53 17.53C17.83 17.23 18 16.83 18 16.4C18 15.98 17.83 15.58 17.53 15.28L11.24 9Z" fill="#575757" fill-opacity="1.000000" fill-rule="nonzero"/>
+                </svg>
+                
+                </div>
+
+            </div> -->
+
+            <div class="main__cards_buttons">
+                <a class="main__cards_buttons-grey clearjs"  href="#">CLEAR SHOPPING CART</a>
+                <a class="main__cards_buttons-grey" href="./index.html">CONTINUE SHOPPING</a>
+            </div>
+
+        </div>
+
+        <div class="main__execution">
+
+            <section class="main__execution_adress">
+                <h7 class="main__execution_adress-title">SHIPPING ADRESS</h7>
+                <form class="shipping" action="#" method="post">
+                    <input class="main__execution_adress-input inp1" type="text" placeholder="Bangladesh" required>
+                    <input class="main__execution_adress-input" type="text" placeholder="State" required>
+                    <input class="main__execution_adress-input" type="text" placeholder="Postcode / Zip" required>
+                    <button class="main__execution_adress-quote">GET A QUOTE</button>
+                    <div class="main__execution_total">
+                        <p class="main__execution_total-subtext">SUB TOTAL         <span class="main__execution_total-subtotal"></span></p>
+                        <p class="main__execution_total-grandtext">GRAND TOTAL     <span class="main__execution_total-grandtotal">$900</span></p>
+                        <div class="main__execution_total-line"></div>
+                        <button class="main__execution_total-button">PROCEED TO CHECKOUT</button>
+                        
+                    </div>
+                </form>
+            </section>
+
+           
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+
+        <section class="footer__main">
+          <div class="footer__main_transparensy">
+            <div class="footer__main_container">
+              <div class="footer__main_left">
+                <img
+                  src="./img/footer/Intersect.png"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <p class="left_text">
+                  “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                  <i
+                    >a pulvinar purus<br />
+                    condimentum“</i
+                  >
+                </p>
+              </div>
+              <div class="footer__main_right">
+                <h3 class="right_title">SUBSCRIBE</h3>
+                <p class="right_subtitle">FOR OUR NEWLETTER AND PROMOTION</p>
+                <form class="form" action="#">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="Enter Your Email"
+                    required
+                  />
+                  <button class="subscribe_btn" type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <div class="footer__bottom">
+          <p class="footer__bottom_copyright">© 2021 Brand All Rights Reserved.</p>
+          <div class="footer__bottom_social">
+            <a href="#" class="social_wrop">
+              <svg
+                width="10.000000"
+                height="16.000000"
+                viewBox="0 0 10 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="9.932734"
+                  height="16.000000"
+                  transform="translate(-0.073975 0.000000)"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <g clip-path="url(#clip190_1606)">
+                  <path
+                    id="Vector1"
+                    class="social_img"
+                    d="M8.08 8.28L8.5 5.61L5.89 5.61L5.89 3.88C5.89 3.15 6.25 2.44 7.42 2.44L8.61 2.44L8.61 0.17C8.61 0.17 7.53 0 6.5 0C4.35 0 2.94 1.27 2.94 3.58L2.94 5.61L0.54 5.61L0.54 8.28L2.94 8.28L2.94 14.72L5.89 14.72L5.89 8.28L8.08 8.28Z"
+                    fill="#000000"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="social_wrop">
+              <svg
+                width="15.000000"
+                height="17.000000"
+                viewBox="0 0 15 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="14.899101"
+                  height="17.000000"
+                  transform="translate(-0.316040 0.000000)"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <g clip-path="url(#clip190_1610)">
+                  <path
+                    id="Vector2"
+                    class="social_img"
+                    d="M7.13 4.68C5.02 4.68 3.31 6.38 3.31 8.49C3.31 10.6 5.02 12.31 7.13 12.31C9.25 12.31 10.95 10.6 10.95 8.49C10.95 6.38 9.25 4.68 7.13 4.68ZM7.13 10.97C5.76 10.97 4.65 9.86 4.65 8.49C4.65 7.12 5.76 6.01 7.13 6.01C8.5 6.01 9.62 7.12 9.62 8.49C9.62 9.86 8.5 10.97 7.13 10.97ZM12 4.52C12 5.02 11.6 5.41 11.11 5.41C10.61 5.41 10.22 5.01 10.22 4.52C10.22 4.03 10.62 3.63 11.11 3.63C11.6 3.63 12 4.03 12 4.52ZM14.53 5.42C14.47 4.23 14.2 3.18 13.33 2.31C12.46 1.44 11.4 1.16 10.2 1.1C8.97 1.03 5.29 1.03 4.06 1.1C2.86 1.16 1.81 1.43 0.93 2.3C0.06 3.17 -0.21 4.23 -0.27 5.42C-0.34 6.65 -0.34 10.33 -0.27 11.56C-0.21 12.75 0.06 13.81 0.93 14.68C1.81 15.55 2.86 15.82 4.06 15.88C5.29 15.95 8.97 15.95 10.2 15.88C11.4 15.82 12.46 15.55 13.33 14.68C14.2 13.81 14.47 12.75 14.53 11.56C14.6 10.33 14.6 6.65 14.53 5.42ZM12.94 12.88C12.68 13.53 12.18 14.03 11.53 14.29C10.54 14.68 8.22 14.59 7.13 14.59C6.05 14.59 3.72 14.68 2.74 14.29C2.09 14.03 1.58 13.53 1.32 12.88C0.93 11.9 1.02 9.57 1.02 8.49C1.02 7.41 0.94 5.08 1.32 4.11C1.58 3.45 2.08 2.95 2.74 2.69C3.72 2.3 6.05 2.39 7.13 2.39C8.22 2.39 10.55 2.31 11.53 2.69C12.18 2.95 12.68 3.45 12.94 4.11C13.33 5.09 13.24 7.41 13.24 8.49C13.24 9.57 13.33 11.9 12.94 12.88Z"
+                    fill="#000000"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="social_wrop">
+              <svg
+                width="12.000000"
+                height="16.000000"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="11.919281"
+                  height="16.000000"
+                  transform="translate(-0.591919 0.000000)"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <g clip-path="url(#clip190_1618)">
+                  <path
+                    id="Vector3"
+                    class="social_img"
+                    d="M5.74 0.2C2.55 0.2 -0.6 2.34 -0.6 5.79C-0.6 8 0.63 9.25 1.38 9.25C1.68 9.25 1.86 8.38 1.86 8.14C1.86 7.85 1.13 7.23 1.13 6.02C1.13 3.51 3.03 1.73 5.48 1.73C7.6 1.73 9.16 2.94 9.16 5.16C9.16 6.82 8.5 9.93 6.36 9.93C5.59 9.93 4.93 9.37 4.93 8.56C4.93 7.38 5.74 6.24 5.74 5.02C5.74 2.95 2.83 3.32 2.83 5.82C2.83 6.35 2.9 6.93 3.13 7.41C2.7 9.26 1.82 12.03 1.82 13.94C1.82 14.53 1.91 15.11 1.96 15.7C2.07 15.82 2.02 15.81 2.18 15.75C3.74 13.6 3.69 13.17 4.39 10.35C4.78 11.08 5.76 11.48 6.55 11.48C9.84 11.48 11.32 8.24 11.32 5.33C11.32 2.22 8.66 0.2 5.74 0.2Z"
+                    fill="#000000"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="social_wrop">
+              <svg
+                width="16.000000"
+                height="16.000000"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="15.892374"
+                  height="16.000000"
+                  transform="translate(-0.840698 0.000000)"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <g clip-path="url(#clip190_1614)">
+                  <path
+                    id="Vector4"
+                    class="social_img"
+                    d="M13.41 4.74C13.42 4.88 13.42 5.02 13.42 5.16C13.42 9.5 10.15 14.49 4.16 14.49C2.31 14.49 0.6 13.95 -0.85 13.02C-0.58 13.05 -0.33 13.06 -0.06 13.06C1.46 13.06 2.87 12.54 3.98 11.66C2.55 11.63 1.35 10.69 0.94 9.39C1.14 9.42 1.34 9.44 1.55 9.44C1.85 9.44 2.14 9.4 2.41 9.32C0.92 9.02 -0.2 7.7 -0.2 6.11L-0.2 6.07C0.23 6.31 0.74 6.46 1.27 6.48C0.39 5.89 -0.18 4.89 -0.18 3.75C-0.18 3.14 -0.02 2.58 0.26 2.1C1.87 4.09 4.28 5.39 6.98 5.53C6.93 5.28 6.9 5.03 6.9 4.78C6.9 2.97 8.35 1.5 10.16 1.5C11.09 1.5 11.94 1.89 12.54 2.53C13.27 2.39 13.98 2.12 14.6 1.74C14.36 2.5 13.85 3.14 13.17 3.55C13.83 3.48 14.46 3.29 15.05 3.04C14.6 3.69 14.05 4.27 13.41 4.74Z"
+                    fill="#000000"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+    </footer>
+    <script type="module" src="./js/cart.js"></script>
+</body>
+</html>

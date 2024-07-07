@@ -525,11 +525,9 @@ ul {
     margin-top: 64px;
     margin-bottom: 48px;
   }
-
-
 }
 @media (max-width: 375px) {
-  .user{
-      display: none;
+  .user {
+    display: none;
   }
-}
+}/*# sourceMappingURL=style.css.map */

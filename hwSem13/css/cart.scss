@@ -1,0 +1,221 @@
+@import 'vars';
+@import 'mixin';
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 96px;
+    margin-bottom: 128px;
+    flex-wrap: wrap;
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 652px;
+
+        &_container {
+            display: flex;
+
+            box-shadow: $shadowDownRight;
+
+            &-close {
+                fill: rgb(87, 87, 87);
+                padding-top: 28px;
+                padding-right: 22px;
+                padding-bottom: 12px;
+                cursor: pointer;
+                height: 30px;
+                transition: all 0.3s;
+            }
+
+            &-close:hover {
+                transform: scale(1.1);
+            }
+
+            &-product {
+                max-width: 262px;
+
+            }
+
+            &-content {
+                width: 330px;
+                padding-left: 31px;
+                padding-top: 22px;
+                padding-right: 20px;
+
+                &-title {
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 29px;
+                    padding-bottom: 42px;
+                    max-width: 262px;
+                }
+
+                &-text {
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: rgb(87, 87, 87);
+                    line-height: 30px;
+                }
+
+                &-text .spanprice {
+                    color: $colorRed23991112;
+                }
+
+                &-text span {
+                    color: $colorGrey11110110;
+                }
+
+                &-text .count {
+                    display: inline-block;
+                    padding: 0 16px 0 16px;
+                    border: 1px solid rgb(234, 234, 234);
+                    line-height: 22px;
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    color: rgb(101, 101, 101);
+                    width: 25px;
+                    text-align: center;
+                }
+                
+                .ask {
+                    display: inline-block;
+                    border: 1px solid $colorGrey11110110;
+                    line-height: 16px;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    padding-left: 1px;
+                    margin-right: 18px;
+                    cursor: pointer;
+                }
+
+                .ask-red {
+                    color: $colorRed23991112;
+                    border: 1px solid $colorRed23991112;
+                }
+
+            }
+        }
+
+        &_buttons {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 72px;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            &-grey {
+                @include buttonGrey();
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            &-grey:hover {
+                @include buttonGreyHover();
+            }
+        }
+    }
+
+    &__execution {
+        width: 360px;
+
+        &_adress {
+            padding-top: 17px;
+
+            &-title {
+                font-weight: 300;
+                line-height: 19px;
+            }
+
+            &-input {
+                padding-left: 17.24px;
+                display: block;
+                width: calc(100% - 17px - 2px);
+                height: 45px;
+                margin-top: 20px;
+                outline: none;
+                border: 1px solid rgb(164, 164, 164);
+                
+            }
+            .inp1::placeholder{
+                color: rgb(177, 177, 177);
+            }
+            
+            &-quote{
+                @include buttonGrey();
+                padding-left: 14.2px;
+                padding-right: 14.2px;
+                height: 35px;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 13px;
+                background-color: #fff;
+                color: rgb(74, 74, 74);
+                margin-top: 23.5px;
+            }
+            &-quote:hover{
+                @include buttonGreyHover();
+            }
+        }
+        &_total{
+            background-color: rgb(245, 243, 243);
+            width: calc(100% - 2 * 34px);
+            margin-top: 57px;
+            padding: 39px 34px 42px 34px;
+            &-subtext{
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 13px;
+                color: rgb(74, 74, 74);
+                text-align: right;
+                margin-bottom: 12px;
+            }
+            &-subtotal{
+                margin-left: 20px;
+            }
+            &-grandtext{
+                font-weight: 300;
+                text-align: right;
+            }
+            &-grandtotal{
+                color: rgb(241, 109, 127);
+                margin-left: 20px;
+                margin-right: 3px;
+                font-weight: 700;
+            }
+            &-line{
+                height: 1px;
+                width: 275px;
+                margin: 21px auto 17px auto;
+                background-color: rgb(226, 226, 226);
+            }
+            &-button{
+                @include buttonRed();
+                font-weight: 300;
+                line-height: 19px;
+                margin: 0 auto;
+            }
+            &-button:hover{
+                @include buttonRedHover();
+            }
+        }
+        
+    }
+}
+
+
+// ==============================
+@media (max-width: 768px){
+    .main__cards_container-content{
+        width: 734px;
+    }
+}
+
+@media (max-width: 375px){
+
+}

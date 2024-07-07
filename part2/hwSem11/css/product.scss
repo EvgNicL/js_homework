@@ -1,0 +1,407 @@
+@import 'vars';
+@import 'mixin';
+
+.header {
+    &__top {
+        background-color: rgb(34, 34, 34);
+        min-height: 57px;
+        padding-top: 18px;
+
+        &_left {
+            gap: 41px;
+            display: flex;
+        }
+
+        &_right {
+            gap: 33px;
+            display: flex;
+            position: relative;
+
+            .basket_count {
+                width: 19px;
+                height: 19px;
+                background-color: $colorRed;
+                border-radius: 50%;
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                color: $colorWhite;
+                text-align: center;
+            }
+
+            .dropdown {
+                display: flex;
+                position: relative;
+
+                .menu {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: fixed;
+                    top: 75px;
+                    right: 0;
+                    padding: 32px 74px 32px 32px;
+                    width: 126px;
+                    background-color: $colorWhite;
+                    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+                    z-index: 4;
+                    transition: all 0.5s;
+
+                    .menu_title {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 17px;
+                        margin-left: 1px;
+                        margin-bottom: 24px;
+                    }
+
+                    .menu_item {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: $colorRed;
+                        margin-top: 20px;
+                    }
+
+                    .menu_list {
+                        color: rgb(111, 110, 110);
+                        margin-top: 16px;
+                        padding-left: 21.5px;
+                        flex-wrap: nowrap;
+                    }
+
+                    .menu_link:hover {
+                        color: $colorRed;
+                    }
+                }
+            }
+
+            .dropdown:hover {
+                .menu {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+    }
+
+    &__nav {
+        background-color: rgb(248, 243, 244);
+        padding: 59px 0 60px 0;
+
+        &_left {
+            color: $colorRed;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &_right {
+            display: flex;
+            gap: 0.4em;
+            color: rgb(99, 99, 99);
+            font-weight: 300;
+            font-size: 14px;
+
+            .span {
+                color: $colorRed;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.main {
+    &__carusel {
+        .img{
+            width: 50.94%;
+        }
+        &_img {
+            width: 100%;
+            background-color: rgb(247, 247, 247);
+            border: 1px solid rgb(234, 234, 234);
+            text-align: center;
+            position: relative;
+            
+
+            .arbox {
+                background-color: rgba(42, 42, 42, 0.15);
+                width: 47px;
+                height: 47px;
+                position: absolute;
+                top: 365px;
+                @include flex();
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .arbox:hover{
+                @include buttonRedHover();
+            }
+
+            &_arleft {
+                left: 0;
+            }
+
+            &_arRight {
+                right: 0;
+            }
+        }
+
+        &_content {
+            @include center();
+            text-align: center;
+            padding: 64.5px 0 64.5px 0;
+            border: 1px solid rgb(234, 234, 234);
+            background-color: $colorWhite;
+            position: relative;
+            margin-top: -65px;
+            z-index: 2;
+
+            .subtitle {
+                font-weight: 300;
+                font-size: 14px;
+                color: $colorRed;
+            }
+
+            .line {
+                width: 63px;
+                height: 3px;
+                background-color: $colorRed23991112;
+                margin: 12.1px auto 12.1px auto;
+            }
+
+            .title {
+                color: rgb(77, 77, 77);
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+
+            }
+
+            .description {
+                max-width: 555px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                margin: 48.4px auto 32.3px auto;
+            }
+
+            .price {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 29px;
+                color: $colorRed23991112;
+            }
+
+            .longline {
+                max-width: 642px;
+                height: 1px;
+                background-color: $colorRed23991112;
+                margin: 64.5px auto 64.5px auto;
+            }
+
+            .choise {
+                display: flex;
+                justify-content: center;
+                gap: 23px;
+            }
+
+            .choise_item {
+                color: rgb(111, 110, 110);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .choise_icon {
+                margin-left: 9px;
+                margin-bottom: 2px;
+            }
+
+            &_btn {
+                margin: 48.4px auto 0 auto;
+                display: flex;
+                align-items: center;
+                gap: 23px;
+                padding-left: 24px;
+                width: 212px - 24px;
+                height: 48.41px;
+                border: 1px solid rgb(255, 106, 106);
+                transition: all 0.3s;
+            }
+
+            &_btn:hover {
+
+                background-color: rgb(255, 106, 106);
+
+                .button_text {
+                    color: $colorWhite;
+                }
+
+                .button_img {
+                    fill:$colorWhite;
+                }
+            }
+
+            .button_text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: rgb(242, 99, 118);
+            }
+        }
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(314px, 360px));
+        gap: 2.6%;
+        padding-bottom: 24px;
+        justify-content: center;
+        margin-top: 128px;
+        margin-bottom: 104px;
+
+        &_container {
+            transition: all 0.4s;
+            width: 100%;
+            background-color: rgb(248, 248, 248);
+
+            &_imgbox:hover {
+
+                .main__products_container_imgbox_hover,
+                .main__products_container_imgbox_hoverbtn {
+                    display: flex;
+                }
+            }
+
+            &_imgbox {
+                width: 100%;
+                position: relative;
+                transition: all 0.3s;
+
+                &_img {
+                    width: 100%;
+                }
+
+                &_hover {
+                    display: none;
+                    position: absolute;
+                    z-index: 3;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(58, 56, 56, 0.86);
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &_hoverbtn {
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(255, 255, 255);
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    border: 1px solid $colorWhite;
+                    width: 139px;
+                    height: 44px;
+                    gap: 11px;
+                }
+
+
+            }
+
+            &_content {
+                display: block;
+                padding: 24px 28px 24px 16px;
+                text-align: left;
+                background-color: rgb(248, 248, 248);
+
+                &_name {
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 16px;
+                    padding-bottom: 16px;
+                }
+
+                &_description {
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: rgb(93, 93, 93);
+                    max-width: 315px;
+                }
+
+                &_price {
+                    color: $colorRed;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    padding-top: 16px;
+                }
+
+
+            }
+
+
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .main__carusel_img .arbox{
+        top: 315px;
+    }
+    .main__carusel_content{
+        margin-top: -40px;
+    }
+    
+}
+@media (max-width: 1040px) {
+    .main__carusel_img .arbox{
+        top: 285px;
+    }
+    .main__carusel_content{
+        margin-top: -30px;
+    }
+    
+}
+@media (max-width: 900px) {
+    .main__carusel{
+        &_img .img{
+            width: 466px;
+            margin-top: 20px;
+        }
+        &_img .arbox{
+            top: 245px;
+        }
+        &_content{
+            margin-top: 0;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .main{
+        &__carusel{
+            &_img {
+                height: 624px;
+            }
+            &_img .arbox{
+                top: 288px;
+
+            }
+        }
+        &__products{
+            gap: 16px;
+        }
+        &__products:nth-last-child(2n + 1){
+            display: none;
+        }
+        
+    }
+
+    
+}

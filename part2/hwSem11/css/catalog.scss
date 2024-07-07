@@ -1,0 +1,179 @@
+@import 'vars';
+@import 'mixin';
+
+
+.main {
+    &__filterbox {
+
+        display: flex;
+        @include padding_center();
+        margin-top: 20px;
+        margin-bottom: 48px;
+        min-height: 49px;
+        position: relative;
+        &_filter {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            cursor: pointer;
+            .spanfilter {
+                margin-left: 11px;
+            }
+        
+
+        }
+
+        .details1[open] .main__filterbox_filter {
+            color: $colorRed23991112;
+        }
+
+        .details1[open] .main__filterbox_filter-svg {
+            fill: $colorRed23991112;
+        }
+        .details1[open] .main__filterbox_dropdown{
+            box-shadow: $shadow;
+            padding-left: 17px;
+        }
+        &_dropdown {
+            width: 340px;
+            position: absolute;
+            z-index: 4;
+            background-color:$colorWhite;
+            padding: 16px 16px 16px 17px;
+    
+            .details[open] summary {
+                color: $colorRed23991112;
+            }
+    
+    
+            &_item {
+                height: 37px;
+                border-left: 5px solid $colorRed23991112;
+                border-bottom: 1px solid rgb(235, 235, 235);
+                margin-top: 18px;
+                padding-left: 11px;
+                padding-top: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: $colorGrey11110110;
+                cursor: pointer;
+    
+                &-link {
+                    display: block;
+                    padding-top: 5px;
+                    padding-bottom: 6px;
+                    padding-left: 16px;
+                }
+    
+                &-link:first-of-type {
+                    padding-top: 24px;
+                }
+    
+                &-link:hover {
+                    color: $colorRed23991112;
+                }
+            }
+        }
+
+        &_sort{
+            z-index: 5;
+            display: inline-flex;
+            margin-left: 409px;
+            &-item{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: $colorGrey11110110;
+                padding: 16px 0 16px 0;
+                position: relative;
+                &-ar{
+                    padding-left: 10px;
+                }
+                padding-right: 28px;
+            }
+           
+
+        }
+
+    }
+
+    &__products {
+        margin-bottom: 24px;
+        margin-top: 0;
+
+        &_container {
+            margin: 0;
+        }
+    }
+
+    &__nav {
+        border: 1px solid rgb(235, 235, 235);
+        height: 44px;
+        max-width: 284px;
+        margin: 0 auto 96px auto;
+        padding: 0 16px 0 16px;
+
+
+        &_pagination {
+            display: flex;
+            height: 44px;
+            max-width: 284px;
+            justify-content: center;
+
+            &_page-item {
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+            }
+
+            &_page-item:nth-child(8),
+            &_page-item:nth-child(9),
+            &_page-item:nth-child(10),
+            &_page-item:nth-child(2) a,
+            &_page-item:nth-child(9) a {
+                padding-left: 0;
+                color: rgb(196, 196, 196);
+            }
+
+            &_page-item:nth-child(7) a {
+                padding-right: 0;
+            }
+
+            &_page-item:nth-child(2) .main__nav_pagination_page-link {
+                color: $colorRed23991112;
+                padding-left: 8px;
+            }
+
+            &_page-item:nth-child(9) .main__nav_pagination_page-link {
+                padding-right: 8px;
+            }
+
+            &_page-link {
+                padding: 10px;
+                font-weight: 300;
+                line-height: 1px;
+                color: rgb(196, 196, 196);
+            }
+
+            &_page-item:first-child a {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            &_page-item:last-child {
+                // padding-left: 8px;
+                padding-right: 0;
+            }
+
+            &_page-link:hover {
+                color: $colorRed23991112;
+            }
+
+        }
+    }
+
+}
+
+// =========================================
+
