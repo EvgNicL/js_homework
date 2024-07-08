@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    <script>
+        "use struct";
+
+// 1) Дан массив const arr = [1, 5, 7, 9] с помощью Math.min и spread оператора,
+// найти минимальное число в массиве, решение задание должно состоять из одной
+// строки кода.
+
+console.log('Задание 1');
+const arr = [1, 5, 7, 9];
+console.log(Math.min(...arr));
+
+// 2) Напишите функцию createCounter, которая создает счетчик и возвращает объект
+// с двумя методами: increment и decrement. Метод increment должен увеличивать
+// значение счетчика на 1, а метод decrement должен уменьшать значение счетчика
+// на 1. Значение счетчика должно быть доступно только через методы объекта,
+// а не напрямую.
+
+console.log('Задание 2');
+function createCounter () {
+    let counter = 0;
+    function increment () {
+        return ++counter;
+    }
+    function decrement () {
+        return --counter;
+    }
+    return {increment, decrement};
+}
+const obj = createCounter();
+
+obj.increment();
+obj.increment();
+obj.increment();
+console.log(obj.increment());
+obj.decrement();
+console.log(obj.decrement());
+
+// 3) Дополнительное задание, выполняем только если проходили работу с DOM.
+// Напишите рекурсивную функцию findElementByClass, которая принимает корневой
+// элемент дерева DOM и название класса в качестве аргументов и возвращает первый
+// найденный элемент с указанным классом в этом дереве.
+
+// Пример
+// const rootElement = document.getElementById('root');
+// const targetElement = findElementByClass(rootElement, 'my-class');
+// console.log(targetElement);
+
+console.log('Задание 3');
+function findElementByClass (root, myClass) {
+    if (root.className === myClass) return root;
+    const psevdoAr = root.children;
+    if (psevdoAr.length === 0) return null;
+    for (let i = 0; i < psevdoAr.length; i++) {
+        const foundEl = findElementByClass(psevdoAr[i], myClass);
+        if (foundEl !== null) return foundEl;
+    }
+    return null;
+}
+console.log(findElementByClass(document, 'body'));
+
+
+    </script>
+</body>
+</html>
