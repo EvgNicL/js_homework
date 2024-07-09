@@ -36,6 +36,23 @@ function createCounter () {
 }
 const obj = createCounter();
 
+// вариант педагога
+function createCounter2() {
+  let counter = 0;
+  return {
+    increment() {
+      ++counter;
+    }, 
+    decrement() {
+      --counter;
+    },
+    getCounter() {
+      return counter;
+    }
+  };
+}
+
+
 obj.increment();
 obj.increment();
 obj.increment();
@@ -55,9 +72,9 @@ console.log(obj.decrement());
 
 console.log('Задание 3');
 function findElementByClass (root, myClass) {
-    if (root.className === myClass) return root;
+    if (root.classList.contains(myClass)) return root;
     const psevdoAr = root.children;
-    if (psevdoAr.length === 0) return null;
+   // if (psevdoAr.length === 0) return null;  //поправка педагога - убрать
     for (let i = 0; i < psevdoAr.length; i++) {
         const foundEl = findElementByClass(psevdoAr[i], myClass);
         if (foundEl !== null) return foundEl;
@@ -66,6 +83,7 @@ function findElementByClass (root, myClass) {
 }
 console.log(findElementByClass(document, 'body'));
 
+// 
 
     </script>
 </body>

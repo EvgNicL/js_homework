@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw2 OOP</title>
+</head>
+<body>
+    <script>
+        "use strict";
+// Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
+
+// Свойство title (название) - строка, название книги.
+// Свойство author (автор) - строка, имя автора книги.
+// Свойство pages (количество страниц) - число, количество страниц в книге.
+// Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
+
+// // Пример использования класса
+// const book = new Book("BookName1", "Author1", 123);
+// book.displayInfo(); // "Title: BookName1, Author: Author1, Pages: 123"
+
+console.log('Задание 1');
+class Book {
+    constructor (title, autor, pages){
+        this.title = title;
+        this.autor = autor;
+        this.pages = pages;
+    }
+
+    displayInfo() {
+        console.log(`Title: ${this.title}, Author: ${this.autor}, Pages: ${this.pages}`);
+    }
+}
+const book = new Book("BookName1","Autor1", 123);
+book.displayInfo(); 
+
+
+// ## Задание 2: "Управление списком студентов"
+// Реализуйте класс Student, представляющий студента, со следующими свойствами и методами:
+
+// Свойство name (имя) - строка, имя студента.
+// Свойство age (возраст) - число, возраст студента.
+// Свойство grade (класс) - строка, класс, в котором учится студент.
+// Метод displayInfo() - выводит информацию о студенте в консоль.
+
+// // Пример использования класса
+// const student = new Student("John Smith", 16, "10th grade");
+// student.displayInfo(); // "Name: John Smith, Age: 16, Grade: 10th grade"
+
+console.log('Задание 2');
+class Student {
+    constructor(name, age, grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+    displayInfo() {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+    }
+}
+const student = new Student("John Smith", 16, "10th grade");
+student.displayInfo();
+
+    </script>
+</body>
+</html>
