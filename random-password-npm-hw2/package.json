@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "repository": "https://github.com/EvgNicL/js_homework.git",
   "keywords": [],
   "author": "Evgenia Lizunova",
   "license": "ISC"
