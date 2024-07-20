@@ -10,5 +10,8 @@
   "repository": "https://github.com/EvgNicL/js_homework.git",
   "keywords": [],
   "author": "Evgenia Lizunova",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
 }
