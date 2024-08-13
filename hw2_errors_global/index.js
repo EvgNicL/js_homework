@@ -236,12 +236,14 @@ btnEl.addEventListener('click', (event) => {
     event.preventDefault(); 
     try {
 
-        if (textareaEl.value.length < 50 || textareaEl.value.length > 500) 
+        if (textareaEl.value.length < 50 || textareaEl.value.length > 500) {
             alert("Количество символов должно быть \n от 50 до 500.");
-        const comment = getObjComment(selectEl.value, textareaEl.value);
-        addComment(commentsData, comment);
-        setCommentToHtml(selectEl.value, textareaEl.value);
-        textareaEl.value = '';
+        } else {
+            const comment = getObjComment(selectEl.value, textareaEl.value);
+            addComment(commentsData, comment);
+            setCommentToHtml(selectEl.value, textareaEl.value);
+            textareaEl.value = '';
+        }
 
     } catch (error) {
         alert('Что-то пошло не так.')
