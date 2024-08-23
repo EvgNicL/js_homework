@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>Расписание занятий</title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-size: 20px;
+            }
+            button {
+                margin-left: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+        <section>
+            <h1>Расписание занятий</h1>
+            <div class="container"></div>
+        </section>
+        <script>
+        // Урок 1. Dom-дерево
+
+// Вы разрабатываете веб-страницу для отображения расписания занятий в спортивном клубе. Каждое занятие имеет название, время проведения, максимальное количество участников и текущее количество записанных участников.
+
+const scheduleData = [
+    {
+        name: 'class 1',
+        startTime: '08.00',
+        max: 15,
+        current: 8
+    },
+    {
+        name: 'class 2',
+        startTime: '09.00',
+        max: 12,
+        current: 8
+    },
+    {
+        name: 'class 3',
+        startTime: '10.00',
+        max: 10,
+        current: 8
+    }
+]
+// 1. Создайте веб-страницу с заголовком "Расписание занятий" и областью для отображения занятий.
+
+// 2. Загрузите информацию о занятиях из предоставленных JSON-данных. Каждое занятие должно отображаться на странице с указанием его названия, времени проведения, максимального количества участников и текущего количества записанных участников.
+
+const containerEl = document.querySelector('.container');
+scheduleData.forEach(el => {
+    containerEl.insertAdjacentHTML('beforeend', `
+        <div id="box">
+            <h3 id="name">${el.name}</h3>
+            <p class="list-group-item-danger">Время проведения: <span class="badge bg-primary rounded-pill">${el.startTime}</span> 
+            <p class="max list-group-item-primary">Максимальное количество участников: <span class="badge bg-primary rounded-pill">${el.max}</span>    
+            <p class="current list-group-item-warning">Текущее количество записанных участников: <span class="badge bg-primary rounded-pill" id="span">${el.current}</span>  
+            <button id="addButton" type="button" class="btn btn-primary btn-lg">Записаться</button> 
+            <button id="delButton" type="button" class="btn btn-secondary btn-lg">Отменить запись</button>    
+        </div>
+    `)
+})
+
+// 3. Пользователь может нажать на кнопку "Записаться" для записи на занятие. Если максимальное количество участников уже достигнуто, кнопка "Записаться" становится неактивной.
+
+
+
+containerEl.addEventListener('click', event => {
+    try {
+        const addBtn = event.target.closest('#addButton');
+        const delBtn = event.target.closest('#delButton');
+        
+        if (addBtn) {
+
+            const box = event.target.closest('#box');
+            const name = box.children[0].textContent;
+            const currentEl = Array.from(box.children).find(el => el.classList
+                .contains('current')).children[0];
+
+            const max = Array.from(box.children).find(el => el.classList
+                .contains('max')).children[0].textContent;
+            let current = currentEl.textContent;
+    
+            if (+max > +current) {
+                currentEl.textContent = `${+current + 1}`;
+            } 
+            else {
+                addBtn.setAttribute('disabled', '');
+            };
+            // обновить изменения
+            scheduleData.forEach(el => {
+                if (el.name === name) {
+                    el.current = +currentEl.textContent;
+                };    
+            });
+        }
+
+        if (delBtn) {
+
+            const box = event.target.closest('#box');
+            const name = box.children[0].textContent;
+            const currentEl = Array.from(box.children).find(el => el.classList
+                .contains('current')).children[0];
+
+            const max = Array.from(box.children).find(el => el.classList
+                .contains('max')).children[0].textContent;
+            let current = currentEl.textContent;
+
+            if (+current !== 0) {
+                currentEl.textContent = `${+current - 1}`;
+                // if (addBtn.hasAttribute('disabled')) {
+                //     addBtn.removeAttribute("disabled");
+                // }
+            } 
+            else {
+                delBtn.setAttribute('disabled', '');
+            };
+            // обновить изменения
+            scheduleData.forEach(el => {
+            if (el.name === name) {
+                el.current = +currentEl.textContent;
+            };    
+            });
+        }
+        
+        console.log(scheduleData);
+
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+
+
+// 4. После успешной записи пользователя на занятие, обновите количество записанных участников и состояние кнопки "Записаться".
+
+// 5. Запись пользователя на занятие можно отменить путем нажатия на кнопку "Отменить запись". После отмены записи, обновите количество записанных участников и состояние кнопки.
+
+// 6. Все изменения (запись, отмена записи) должны сохраняться и отображаться в реальном времени на странице.
+
+// 7. При разработке используйте Bootstrap для стилизации элементов.
+        </script>
+    </body>
+</html>

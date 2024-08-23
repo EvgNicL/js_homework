@@ -75,7 +75,7 @@ function getGrandtotal (x) {
 grandtotalEl.innerHTML = "$" + getGrandtotal(0);
 
 
-/**вычисление колиства товаров в корзине */
+/**вычисление количества товаров в корзине */
 export function getCount () {
   return getCartData().length;
 }
