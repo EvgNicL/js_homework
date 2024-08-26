@@ -1,0 +1,42 @@
+.main {
+    position: fixed;
+    top: 20%;
+    left: 35%;
+}
+.container {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #c0bcbc;
+    position: relative;
+}
+button {
+    position: absolute;
+    top: 50%;
+    border: none;
+    color: #616060;
+    font-weight: bold;
+    transform: scale(1.2, 1.5);
+    margin: 3px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.right {
+    right: 0;
+}
+.dots-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #dddada;
+    margin: 4px;
+    cursor: pointer;
+}
+.active {
+    background-color: #aaa9a9;
+}
