@@ -33,6 +33,7 @@ async function fetchPhotos() {
 
 // Загрузка данных в HTML
 function insertHTML(photo) {
+     addToHistory(photo);
     main.insertAdjacentHTML(
       "afterbegin",
       ` <div>
@@ -81,10 +82,16 @@ export async function loadRandomPhoto() {
 // Записать данные в историю
 function addToHistory (photo) {
     let history = getHistory();
-    history.push({
-    url: photo.urls.small,
-    likes: photo.likes
-  });
+    if (numberOfCurrentDate(currentDate) !== startNumberDate) {
+      history.forEach(el => {
+        if (photo.urls.small !== el.url) {
+          history.push({
+          url: photo.urls.small,
+          likes: photo.likes
+        });
+        }
+      })
+    }
   localStorage.setItem("photoHistory", JSON.stringify(history));
 };
 

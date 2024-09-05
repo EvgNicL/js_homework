@@ -1,8 +1,7 @@
 "use strict";
 
-import { loadNextPhoto, loadRandomPhoto, changeHistory, main } from "./fns.js";
+import { loadRandomPhoto, changeHistory, main } from "./script.js";
 
-//const photos =  loadNextPhoto();
 const photos =  loadRandomPhoto();
 
 
