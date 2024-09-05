@@ -48,14 +48,16 @@ function insertHTML(photo) {
 
 // Загрузка рандомного фото на этот день
 export async function loadRandomPhoto() {
+    if (localStorage.getItem('startNumberDate')) startNumberDate = localStorage.getItem('startNumberDate');
     photos = await fetchPhotos();
     let index = 0;
     if (photos.length > 0) {
-        if (startNumberDate !== getNumberOfCurrentDate(currentDate)) {
+        if (startNumberDate < getNumberOfCurrentDate(currentDate)) {
             index = Math.floor(Math.random() * photos.length);
         } 
         insertHTML(photos[index]);
         addPhotoToHistory(photos[index]);
+        localStorage.setItem('startNumberDate', getNumberOfCurrentDate(currentDate));
     };
 };
 
